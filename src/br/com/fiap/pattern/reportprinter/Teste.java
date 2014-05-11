@@ -6,9 +6,9 @@ public class Teste {
 
 	public static void main(String[] args) throws Exception {
 		AbstractFactory af = new DBFactory();
-		ICityDAO cityDAO = af.getICityDAO("003");
+		ICityDAO cityDAO = af.getICityDAO("001");
 		Country country = new Country("Brasil");
-		State state = new State("Sao Paulo", country);
-		cityDAO.insert(new City("Diadema", state, country));
+		State state = new State("Bahia");
+		cityDAO.insert(new City("Salvador", state, country));
 	}
 }

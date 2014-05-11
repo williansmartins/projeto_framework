@@ -4,7 +4,9 @@ public enum CartaoEnum {
 	VISA("001"),
 	MASTERCARD("002"),
 	Diners("003"),
-	AmericanExpress("004");
+	AmericanExpress("004"),
+	HSBC("005"),
+	Bradesco("006");
 		
 	public final String codigo;
 		

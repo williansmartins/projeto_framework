@@ -9,8 +9,10 @@ public class CartaoHandlerFactory {
 	static {
 		cartaoHandlers.put(CartaoEnum.VISA, VisaHandler.getInstance());
 		cartaoHandlers.put(CartaoEnum.MASTERCARD, MasterCardHandler.getInstance());
-		//cartaoHandlers.put(CartaoEnum.Diners, SantanderHandler.getInstance());
-		//cartaoHandlers.put(CartaoEnum.AmericanExpress, HSBCHandler.getInstance());
+		cartaoHandlers.put(CartaoEnum.Diners, DinersHandler.getInstance());
+		cartaoHandlers.put(CartaoEnum.AmericanExpress, AmericanExpressHandler.getInstance());
+		cartaoHandlers.put(CartaoEnum.Bradesco, BradescoHandler.getInstance());
+		cartaoHandlers.put(CartaoEnum.HSBC, HSBCHandler.getInstance());
 	}
 
 	public static ICartaoHandler get(CartaoEnum cartaoEnum) throws Exception {
