@@ -1,16 +1,16 @@
-package br.com.fiap.pattern.atividade;
+package br.com.fiap.pattern.atividade.bancos;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class MasterCardHandler implements ICartaoHandler {
+public class MasterCardBradesco implements IBradesco {
 
-	public static MasterCardHandler instance = null;
+	public static MasterCardBradesco instance = null;
 	
-	public static MasterCardHandler getInstance(){
+	public static MasterCardBradesco getInstance(){
 		if(instance == null){
-			instance = new MasterCardHandler();
+			instance = new MasterCardBradesco();
 		}
 		return instance;
 	}
@@ -21,6 +21,7 @@ public class MasterCardHandler implements ICartaoHandler {
 		System.out.println("Detalhes:");
 		System.out.println("Codigo: " + CartaoEnum.MASTERCARD.getCodigo());
 		System.out.println("Nome: " + CartaoEnum.MASTERCARD.name());
+		System.out.println("Banco: Bradesco");
 		System.out.println("Nome do Cliente: " + nomeCliente);
 		System.out.println("Pontos: " + pontos);
 		System.out.println("Valor Limite: " + valorLimite);

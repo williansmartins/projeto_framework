@@ -75,16 +75,28 @@ public class DBFactory extends AbstractFactory {
 	
 	/**
 	 * Retorna os Bandos de Dados que tem suporte
-	 * @return cartoes String
+	 * @return bancos String
 	 */
 	public static String getBancosMenssage(){
 		return "Banco de Dados Relacional, XML, CSV";
 	}
 	
-	public static Boolean isCartaoSuportado(String codigoDB){
+	public static Boolean isBancoSuportado(String codigoDB){
 		for(DBEnum cDbEnum : dbsCity.keySet()){
 			if(cDbEnum.getCodigo().equals(codigoDB)){
-				System.out.println("Bando de Dados " + cDbEnum.name() + " selecionado.");
+				System.out.println("Bando de Dados " + cDbEnum.name() + "-City selecionado.");
+				return true;
+			}
+		}
+		for(DBEnum cDbEnum : dbsState.keySet()){
+			if(cDbEnum.getCodigo().equals(codigoDB)){
+				System.out.println("Bando de Dados " + cDbEnum.name() + "-State selecionado.");
+				return true;
+			}
+		}
+		for(DBEnum cDbEnum : dbsCountry.keySet()){
+			if(cDbEnum.getCodigo().equals(codigoDB)){
+				System.out.println("Bando de Dados " + cDbEnum.name() + "-Country selecionado.");
 				return true;
 			}
 		}
